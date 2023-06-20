@@ -72,6 +72,16 @@ Certificate Digests:
   MD5:     0d:94:e9:b8:60:23:2b:49:62:5e:2a:8b:fc:0d:da:db
 ```
 
+## Badge for project reference
+
+If you want to recommend this app to your app users to verify it, you can use this badge in your README.
+
+[![QuickTrust](https://img.shields.io/badge/verify-with%20QuickTrust-4DB45B)](https://github.com/cyb3rko/quicktrust)
+
+```
+[![QuickTrust](https://img.shields.io/badge/verify-with%20QuickTrust-4DB45B)](https://github.com/cyb3rko/quicktrust)
+```
+
 ## Screenshots
 |<img src="https://i.imgur.com/nJgaK37.png" width="350">|<img src="https://i.imgur.com/P7P7j8F.png" width="350">|
 |:---:|:---:|
