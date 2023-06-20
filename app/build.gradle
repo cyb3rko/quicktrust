@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jmailen.kotlinter' version '3.15.0' // lintKotlin, formatKotlin
+    id 'com.getkeepsafe.dexcount' version '4.0.0' // :app:countReleaseDexMethods
+}
+
+android {
+    namespace 'de.cyb3rko.quicktrust'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId 'de.cyb3rko.quicktrust'
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName '1.0.0'
+        resConfigs 'en'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        buildConfig true
+        viewBinding true
+    }
+    bundle {
+        storeArchive {
+            enable = false
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/*.version'
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+    implementation 'com.google.android.material:material:1.9.0'
+}
+
+if (project.hasProperty('sign')) {
+    android {
+        signingConfigs {
+            release {
+                storeFile file(System.getenv('KEYSTORE_FILE'))
+                storePassword System.getenv('KEYSTORE_PASSWD')
+                keyAlias System.getenv('KEYSTORE_KEY_ALIAS')
+                keyPassword System.getenv('KEYSTORE_KEY_PASSWD')
+            }
+        }
+    }
+    android.buildTypes.release.signingConfig android.signingConfigs.release
+}
+
+if (project.hasProperty('gplay_upload')) {
+    android {
+        signingConfigs {
+            upload {
+                Properties properties = new Properties()
+                properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+                storeFile file(properties.getProperty('uploadsigning.file'))
+                storePassword properties.getProperty('uploadsigning.password')
+                keyAlias properties.getProperty('uploadsigning.key.alias')
+                keyPassword properties.getProperty('uploadsigning.key.password')
+            }
+        }
+    }
+    android.buildTypes.release.signingConfig android.signingConfigs.upload
+}

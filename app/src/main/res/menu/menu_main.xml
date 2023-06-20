@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cyb3rko.quicktrust.MainActivity">
+    <item
+        android:id="@+id/action_git"
+        android:icon="@drawable/colored_ic_git"
+        android:title="@string/action_git"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/colored_ic_information"
+        android:title="@string/action_about"
+        app:showAsAction="ifRoom" />
+</menu>

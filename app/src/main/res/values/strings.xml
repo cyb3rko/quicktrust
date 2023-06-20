@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuickTrust</string>
+    <string name="action_git">Git</string>
+    <string name="action_about">About</string>
+    <string name="toolbar_subtitle_file">File: %1$s</string>
+    <string name="toolbar_subtitle_app">App: %1$s</string>
+
+    <string name="check_input_found">%1$s found: %2$s</string>
+    <string name="check_input_no_hash">No hash found</string>
+
+    <string name="hash_import_no_hash">No checksum found in file</string>
+
+    <string name="verification_pass">✅ PASS</string>
+    <string name="verification_failure">❌ FAILURE</string>
+    <string name="verification_invalid">❌ INVALID</string>
+    <string name="verification_wrong_file_type_desc">Select an .apk file</string>
+    <string name="verification_extraction_failure_desc">Signature extraction failed</string>
+
+    <string name="apk_card_title">Select APK file</string>
+    <string name="packages_card_title">Select installed app</string>
+    <string name="hash_check_hint">Checksum</string>
+    <string name="hash_import_button_desc">Import hash file</string>
+    <string name="applist_search_hint">Search for app</string>
+
+    <string name="dialog_about_title">About</string>
+    <string name="dialog_about_message">App Version: %1$s (%2$d)\nBuild Type: %3$s\nDevice: %4$s %5$s (%6$s)\nSoftware: Android %7$s (%8$d)</string>
+    <string name="dialog_about_button">Show Icon Credits</string>
+    <string name="dialog_credits_title">Icon Credits</string>
+    <string name="dialog_credits_message">Branch icons created by Creatype - Flaticon\n\nInformation icon created by Freepik - Flaticon\n\nUpload icons created by Ilham Fitrotul Hayat - Flaticon\n\nApk icons created by juicy_fish - Flaticon\n\nMore icons created by Ali Hasan Ash Shiddiq - Flaticon</string>
+    <string name="dialog_credits_button">Open Flaticon</string>
+
+    <string name="debug_example_signature">Subject: C=US,O=Android,CN=Android Debug
+Issuer: C=US,O=Android,CN=Android Debug
+Issued Date: Tue Aug 30 12:42:34 GMT+02:00 2022
+Expiry Date: Thu Aug 22 11:42:34 GMT+01:00 2052
+Type: X.509, Version: 1, Validity: Valid
+Serial number: 01
+Checksums
+MD5: 27a5ce5001d39ce5a54b0cce7a35ee07
+SHA1: 158dd166291e5120feddb38d2a12c9789f094644
+SHA224: 209e6194596b01e822ab64a085690090a98186d531be7c7d74e89f1d
+SHA256: 3f4df8c35d78ce733fd5c4ae730287dc2b7407db3b96a7047b2a018076205a63
+SHA384: 9f9411ccdb2809c02a0193bec39e20fd829007ed910c91f9d395579920f01980ab2cea13f63fd1a5b2d478d1e0c69320
+SHA512: 678102d537aafe1f24db6bb6fc2f5d935ebc0fb76bfb3e6fcb9e61ad2a92a9a78c9d04c9eac0ce646d112dbf768af4d7462ad49a5ec613ea0fb6f65fc0d75b39
+Signature
+Algorithm: SHA1withRSA
+OID: 1.2.840.113549.1.1.5
+Signature: 1963e879a4431002e70620119cbda9dbc2ed7a728c14b7262f14bd371d7db715eb995afdc06ff09ebbbbdad91e7b4d606fc12455d4cf3f30de4b967a1222de448ca589be1e4ba3783bfe146e1e9bec6f0c7d346c98bfc7c2a63644478aacf0b98d4f73bbc963756103b213ff7ff12c137c157ef494188343e10e065b0134ceb71bfc58427bc18eca053e992523ce10189033ab9269bf5eb06bbc7325efe70084afca9c2d61ba5b7f2b91a6b555b60655d33efccccbb88115ebb01c0254b5811350537550c704e00228cb63b270944afc22f795ced52ced041cc8a8cf8f0a51f356cfdb2ae022c4ec6d475f78dde40145840cb567692be12d753abf8a29cf108f
+Public Key
+Algorithm: RSA
+Format: X.509
+RSA Exponent: 65537
+Modulus: 009336e49d34d404f5bf952291aa13249345cc5a0f6370d13897b52442aa97be505d7ca85c2c0e3c0d37fdd6b0b3d0f47b74fd6ff7f124275cf65181a6eae3614d348d3fbeac9c8ad4aa5604b0c5044cd0e7116678ccbf282d06a4d7416505685da65c83c34669fe3fceb31cabb69386b7f4c993ef0daf3f1d6fab85fc58ecc6c9488d4c2a42a7ae21d38671d8c940e0810b0e7539ab4dbf6ea2250dd8fe8ade49f46c90c7f1eb1c42c04248acdc5126ec9a83d42539f0e0dbd960ba139f7f66b0a568b26a7a52cc4f98df0e8da1a027bf9622274dc1b8e65dcca720c866166a3f76fcef8d0b97090d87c269c80f7f36c020decc1380edfd859e870a35bc52dbe3
+    </string>
+    <string name="toast_url_failed">"Opening URL failed, copied URL instead"</string>
+    <string name="exception_report">Report to app creator</string>
+    <string name="exception_copy">Copy to clipboard</string>
+    <string name="toast_stacktrace">Stracktrace copied</string>
+</resources>
