@@ -40,7 +40,7 @@ internal data class App(
             return App(
                 packageName = applicationInfo.packageName,
                 packageLabel = applicationInfo.loadLabel(context.packageManager).toString(),
-                versionName = packageInfo.versionName,
+                versionName = packageInfo.versionName ?: "",
                 versionCode = PackageInfoCompat.getLongVersionCode(packageInfo),
                 flags = applicationInfo.flags,
                 sdk = applicationInfo.targetSdkVersion,
