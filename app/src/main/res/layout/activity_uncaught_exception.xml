@@ -25,6 +25,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:weightSum="5"
+    android:fitsSystemWindows="true"
     tools:context=".utils.UncaughtExceptionActivity">
 
     <androidx.cardview.widget.CardView
