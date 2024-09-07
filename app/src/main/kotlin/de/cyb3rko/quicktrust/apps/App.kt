@@ -34,8 +34,8 @@ internal data class App(
     val certAlgo: String
 ) {
     companion object {
-        fun fromPackageInfo(context: Context, packageInfo: PackageInfo): App {
-            val applicationInfo = packageInfo.applicationInfo
+        fun fromPackageInfo(context: Context, packageInfo: PackageInfo): App? {
+            val applicationInfo = packageInfo.applicationInfo ?: return null
             val (issuer, algo) = SignatureManager.getIssuerAndAlg(packageInfo)
             return App(
                 packageName = applicationInfo.packageName,

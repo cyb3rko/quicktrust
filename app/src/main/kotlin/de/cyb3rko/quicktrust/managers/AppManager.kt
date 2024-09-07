@@ -61,7 +61,9 @@ internal object AppManager {
         }
 
         for (packageInfo in packageInfoList) {
-            apps.add(App.fromPackageInfo(context, packageInfo))
+            App.fromPackageInfo(context, packageInfo)?.let {
+                apps.add(it)
+            }
         }
         return apps
     }

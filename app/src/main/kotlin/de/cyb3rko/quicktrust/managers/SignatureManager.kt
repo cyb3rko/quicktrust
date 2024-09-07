@@ -325,16 +325,17 @@ internal object SignatureManager {
             packageManager.getPackageInfo(
                 packageName,
                 PackageManager.PackageInfoFlags.of(flagSigningInfo.toLong())
-            ).signingInfo.signingCertificateHistory.asList()
+            ).signingInfo?.signingCertificateHistory?.asList() ?: listOf()
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             @Suppress("DEPRECATION")
             packageManager.getPackageInfo(
                 packageName,
                 flagSigningInfo
-            ).signingInfo.signingCertificateHistory.asList()
+            ).signingInfo?.signingCertificateHistory?.asList() ?: listOf()
         } else {
             @Suppress("DEPRECATION")
-            packageManager.getPackageInfo(packageName, flagSigningInfo).signatures.asList()
+            packageManager.getPackageInfo(packageName, flagSigningInfo)
+                .signatures?.asList() ?: listOf()
         }
     }
 }

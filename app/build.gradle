@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace 'de.cyb3rko.quicktrust'
-    compileSdk 33
+    compileSdk 35
 
     defaultConfig {
         applicationId 'de.cyb3rko.quicktrust'
         minSdk 23
-        targetSdk 33
+        targetSdk 35
         versionCode 1
         versionName '1.0.0'
         resourceConfigurations += ['en']
