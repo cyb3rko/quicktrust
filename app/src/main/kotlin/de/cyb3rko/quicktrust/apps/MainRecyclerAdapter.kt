@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
- * Inspired by MuntashirAkon/AppManager
+ * Copyright (c) 2023-2024 Cyb3rKo
+ * Inspired by MuntashirAkon/AppManager:
  * https://github.com/MuntashirAkon/AppManager/blob/3ba5a0472c32b05d507b4390665e03e0929e7619/app/src/main/java/io/github/muntashirakon/AppManager/main/MainRecyclerAdapter.java
  *
  * Licensed under the Apache License, Version 2.0 (the "License");

@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
- * Inspired by MuntashirAkon/AppManager
+ * Copyright (c) 2023-2024 Cyb3rKo
+ * Inspired by MuntashirAkon/AppManager:
  * https://github.com/MuntashirAkon/AppManager/blob/688308dcee755f24faa6cefd1a468891064a02e8/app/src/main/java/io/github/muntashirakon/AppManager/apk/signing/SignerInfo.java
  *
  * Licensed under the Apache License, Version 2.0 (the "License");

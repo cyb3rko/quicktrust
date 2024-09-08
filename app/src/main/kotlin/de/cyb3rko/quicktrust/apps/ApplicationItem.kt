@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
- * Inspired by MuntashirAkon/AppManager
+ * Copyright (c) 2023-2024 Cyb3rKo
+ * Inspired by MuntashirAkon/AppManager:
  * https://github.com/MuntashirAkon/AppManager/blob/4ed70a6790bd6089cb1500e645bfb499e24fdb57/app/src/main/java/io/github/muntashirakon/AppManager/main/ApplicationItem.java
  *
  * Licensed under the Apache License, Version 2.0 (the "License");

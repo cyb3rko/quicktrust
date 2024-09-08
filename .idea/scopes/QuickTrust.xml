@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="QuickTrust" pattern="src[QuickTrust.app.main]:de.cyb3rko.quicktrust..*&amp;&amp;!src[QuickTrust.app.main]:de.cyb3rko.quicktrust.BuildConfig||src[QuickTrust.app.main]:layout..*" />
+</component>
