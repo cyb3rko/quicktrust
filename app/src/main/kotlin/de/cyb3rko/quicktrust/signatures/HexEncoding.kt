@@ -22,9 +22,8 @@ internal object HexEncoding {
     private const val LOWER_CASE_DIGITS = "0123456789abcdef"
     private const val UPPER_CASE_DIGITS = "0123456789ABCDEF"
 
-    private fun encode(data: ByteArray, upperCase: Boolean): CharArray {
-        return encode(data, data.size, upperCase)
-    }
+    private fun encode(data: ByteArray, upperCase: Boolean): CharArray =
+        encode(data, data.size, upperCase)
 
     private fun encode(data: ByteArray, len: Int, upperCase: Boolean): CharArray {
         val digits = if (upperCase) UPPER_CASE_DIGITS else LOWER_CASE_DIGITS
@@ -38,7 +37,6 @@ internal object HexEncoding {
         return result
     }
 
-    fun encodeToString(data: ByteArray, upperCase: Boolean): String {
-        return String(encode(data, upperCase))
-    }
+    fun encodeToString(data: ByteArray, upperCase: Boolean): String =
+        String(encode(data, upperCase))
 }

@@ -16,7 +16,4 @@
 
 package de.cyb3rko.quicktrust.regex
 
-internal data class RegexMatch(
-    val pattern: RegexManager.Pattern,
-    val match: String
-)
+internal data class RegexMatch(val pattern: RegexManager.Pattern, val match: String)

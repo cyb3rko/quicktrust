@@ -260,24 +260,22 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_git -> {
-                openUrl("https://github.com/cyb3rko/quicktrust", "GitHub Repo")
-                true
-            }
-            R.id.action_about -> {
-                AboutDialog.show(
-                    this,
-                    BuildInfo(
-                        BuildConfig.VERSION_NAME,
-                        BuildConfig.VERSION_CODE,
-                        BuildConfig.BUILD_TYPE
-                    )
-                )
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.action_git -> {
+            openUrl("https://github.com/cyb3rko/quicktrust", "GitHub Repo")
+            true
         }
+        R.id.action_about -> {
+            AboutDialog.show(
+                this,
+                BuildInfo(
+                    BuildConfig.VERSION_NAME,
+                    BuildConfig.VERSION_CODE,
+                    BuildConfig.BUILD_TYPE
+                )
+            )
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 }

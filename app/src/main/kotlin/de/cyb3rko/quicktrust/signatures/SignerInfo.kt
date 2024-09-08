@@ -39,7 +39,5 @@ internal class SignerInfo {
         currentSignatures = signatures
     }
 
-    fun getSignatures(): Array<Signature?>? {
-        return currentSignatures
-    }
+    fun getSignatures(): Array<Signature?>? = currentSignatures
 }

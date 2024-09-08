@@ -32,11 +32,9 @@ internal data class ApplicationItem(
     var sha: Pair<String, String>? = null,
     var isUser: Boolean
 ) : PackageItemInfo() {
-    override fun loadIcon(pm: PackageManager): Drawable {
-        return try {
-            pm.getApplicationIcon(packageName)
-        } catch (ignore: Exception) {
-            pm.defaultActivityIcon
-        }
+    override fun loadIcon(pm: PackageManager): Drawable = try {
+        pm.getApplicationIcon(packageName)
+    } catch (ignore: Exception) {
+        pm.defaultActivityIcon
     }
 }

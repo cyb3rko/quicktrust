@@ -43,11 +43,9 @@ internal class MainRecyclerAdapter(
     private val mPackageManager: PackageManager = activity.packageManager
     private val mColorSecondary = ContextCompat.getColor(activity, R.color.md_theme_dark_secondary)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.app_item, parent, false)
-        )
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(
+        LayoutInflater.from(parent.context).inflate(R.layout.app_item, parent, false)
+    )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = currentList[position]
@@ -111,12 +109,8 @@ internal class MainRecyclerAdapter(
     }
 
     object DiffCallback : DiffUtil.ItemCallback<ApplicationItem>() {
-        override fun areItemsTheSame(
-            oldItem: ApplicationItem,
-            newItem: ApplicationItem
-        ): Boolean {
-            return oldItem.packageName == newItem.packageName
-        }
+        override fun areItemsTheSame(oldItem: ApplicationItem, newItem: ApplicationItem): Boolean =
+            oldItem.packageName == newItem.packageName
 
         override fun areContentsTheSame(oldItem: ApplicationItem, newItem: ApplicationItem) = true
     }

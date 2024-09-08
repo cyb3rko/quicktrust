@@ -32,17 +32,14 @@ internal object DigestUtils {
         SHA512("SHA-512")
     }
 
-    private fun getHexDigest(algo: String, bytes: ByteArray): String {
-        return HexEncoding.encodeToString(getDigest(algo, bytes), false)
-    }
+    private fun getHexDigest(algo: String, bytes: ByteArray): String =
+        HexEncoding.encodeToString(getDigest(algo, bytes), false)
 
-    private fun getDigest(algo: String, bytes: ByteArray): ByteArray {
-        return try {
-            MessageDigest.getInstance(algo).digest(bytes)
-        } catch (e: NoSuchAlgorithmException) {
-            e.printStackTrace()
-            ByteArray(0)
-        }
+    private fun getDigest(algo: String, bytes: ByteArray): ByteArray = try {
+        MessageDigest.getInstance(algo).digest(bytes)
+    } catch (e: NoSuchAlgorithmException) {
+        e.printStackTrace()
+        ByteArray(0)
     }
 
     fun getDigests(bytes: ByteArray): List<Pair<String, String>> {

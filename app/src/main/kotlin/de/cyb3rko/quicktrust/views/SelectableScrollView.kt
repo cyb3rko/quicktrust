@@ -22,10 +22,8 @@ import android.view.View
 import android.widget.ScrollView
 import com.google.android.material.textfield.TextInputLayout
 
-internal class SelectableScrollView(
-    context: Context,
-    attrs: AttributeSet
-) : ScrollView(context, attrs) {
+internal class SelectableScrollView(context: Context, attrs: AttributeSet) :
+    ScrollView(context, attrs) {
     override fun requestChildFocus(child: View?, focused: View?) {
         if (child is TextInputLayout) {
             super.requestChildFocus(child, focused)

@@ -40,9 +40,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-internal class PackagesBottomSheet(
-    private val onClick: (item: ApplicationItem) -> Unit
-) : BottomSheetDialogFragment() {
+internal class PackagesBottomSheet(private val onClick: (item: ApplicationItem) -> Unit) :
+    BottomSheetDialogFragment() {
     private lateinit var binding: BottomSheetPackagesBinding
     private lateinit var adapter: MainRecyclerAdapter
 

@@ -89,20 +89,18 @@ internal object SignatureManager {
 
     @RequiresApi(Build.VERSION_CODES.P)
     @Suppress("DEPRECATION")
-    private fun extractSignaturesSub33(context: Context, path: String): Array<Signature> {
-        return context.packageManager.getPackageArchiveInfo(
+    private fun extractSignaturesSub33(context: Context, path: String): Array<Signature> =
+        context.packageManager.getPackageArchiveInfo(
             path,
             PackageManager.GET_SIGNING_CERTIFICATES
         )?.signingInfo!!.signingCertificateHistory
-    }
 
     @Suppress("DEPRECATION")
-    private fun extractSignaturesSub28(context: Context, path: String): Array<Signature> {
-        return context.packageManager.getPackageArchiveInfo(
+    private fun extractSignaturesSub28(context: Context, path: String): Array<Signature> =
+        context.packageManager.getPackageArchiveInfo(
             path,
             PackageManager.GET_SIGNATURES
         )?.signatures!!
-    }
 
     private val sSpannableFactory: Spannable.Factory = Spannable.Factory.getInstance()
 
@@ -207,16 +205,12 @@ internal object SignatureManager {
         context: Context,
         key: CharSequence?,
         value: CharSequence?
-    ): Spannable {
-        return SpannableStringBuilder(getPrimaryText(context, "$key: ")).append(value)
-    }
+    ): Spannable = SpannableStringBuilder(getPrimaryText(context, "$key: ")).append(value)
 
-    private fun getPrimaryText(context: Context, text: CharSequence): Spannable {
-        return getColoredText(
-            setTypefaceSpan(text, "sans-serif-medium"),
-            getTextColorPrimary(context)
-        )
-    }
+    private fun getPrimaryText(context: Context, text: CharSequence): Spannable = getColoredText(
+        setTypefaceSpan(text, "sans-serif-medium"),
+        getTextColorPrimary(context)
+    )
 
     private fun setTypefaceSpan(text: CharSequence, family: String): Spannable {
         val spannable = charSequenceToSpannable(text)
@@ -229,9 +223,8 @@ internal object SignatureManager {
         return spannable
     }
 
-    private fun getTextColorPrimary(context: Context): Int {
-        return MaterialColors.getColor(context, R.attr.colorOnSurface, -1)
-    }
+    private fun getTextColorPrimary(context: Context): Int =
+        MaterialColors.getColor(context, R.attr.colorOnSurface, -1)
 
     private fun getColoredText(text: CharSequence, color: Int): Spannable {
         val spannable: Spannable = charSequenceToSpannable(text)
@@ -244,17 +237,14 @@ internal object SignatureManager {
         return spannable
     }
 
-    private fun charSequenceToSpannable(text: CharSequence): Spannable {
-        return if (text is Spannable) {
-            text
-        } else {
-            sSpannableFactory.newSpannable(text)
-        }
+    private fun charSequenceToSpannable(text: CharSequence): Spannable = if (text is Spannable) {
+        text
+    } else {
+        sSpannableFactory.newSpannable(text)
     }
 
-    private fun getMonospacedText(text: CharSequence): Spannable {
-        return setTypefaceSpan(text, "monospace")
-    }
+    private fun getMonospacedText(text: CharSequence): Spannable =
+        setTypefaceSpan(text, "monospace")
 
     private fun getTitleText(context: Context, text: CharSequence): Spannable {
         val spannable = charSequenceToSpannable(text)
@@ -267,9 +257,7 @@ internal object SignatureManager {
         return getPrimaryText(context, spannable)
     }
 
-    private fun bytesToHex(bytes: ByteArray): String {
-        return HexEncoding.encodeToString(bytes, false)
-    }
+    private fun bytesToHex(bytes: ByteArray): String = HexEncoding.encodeToString(bytes, false)
 
     private fun getSigningInfo(packageInfo: PackageInfo): Array<Signature?>? {
         val signerInfo: SignerInfo = getSignerInfo(packageInfo) ?: return null

@@ -67,7 +67,5 @@ internal object OidMap {
         "1.3.6.1.5.5.7.48.1.5" to "OCSPNoCheck"
     )
 
-    fun getName(oid: String): String {
-        return oidNameMap[oid]!!
-    }
+    fun getName(oid: String): String = oidNameMap[oid]!!
 }
