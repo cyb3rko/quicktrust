@@ -17,8 +17,13 @@ android {
         versionCode = 1
         versionName = "1.0.0"
         resourceConfigurations.add("en")
+        signingConfig = signingConfigs.getByName("debug")
     }
     buildTypes {
+        debug {
+            isMinifyEnabled = false
+            applicationIdSuffix = ".dev"
+        }
         release {
             isMinifyEnabled = true
             isShrinkResources = true
