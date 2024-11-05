@@ -1,19 +1,22 @@
+# QuickTrust
+
+[![API](https://img.shields.io/badge/API-23%2B-coral?logo=android&logoColor=white)](https://apilevels.com)
+[![fdroid](https://img.shields.io/f-droid/v/de.cyb3rko.quicktrust.svg?logo=fdroid)](https://f-droid.org/packages/de.cyb3rko.quicktrust)
+[![release](https://img.shields.io/github/release/cyb3rko/quicktrust.svg?logo=github)](https://github.com/cyb3rko/quicktrust/releases/latest)
+[![last commit](https://img.shields.io/github/last-commit/cyb3rko/quicktrust?color=FE5196&logo=git&logoColor=white)](https://github.com/cyb3rko/quicktrust/commits/main)
+[![license](https://img.shields.io/github/license/cyb3rko/quicktrust?color=1BCC1B&logo=apache)](https://www.apache.org/licenses/LICENSE-2.0)
+
 <p align="center">
   <img alt="QuickTrust" src="https://i.imgur.com/gjIbTNi.png" width="150"/>
 </p>
 
-<h1 align="center">QuickTrust</h1>
-
-[![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat)](https://apilevels.com)
-[![release](https://img.shields.io/github/release/cyb3rko/quicktrust.svg)](https://github.com/cyb3rko/quicktrust/releases/latest)
-[![fdroid](https://img.shields.io/f-droid/v/com.cyb3rko.quicktrust.svg)](https://f-droid.org/packages/com.cyb3rko.quicktrust)
-[![license](https://img.shields.io/github/license/cyb3rko/quicktrust)](https://www.apache.org/licenses/LICENSE-2.0)
-[![last commit](https://img.shields.io/github/last-commit/cyb3rko/quicktrust?color=F34C9F)](https://github.com/cyb3rko/quicktrust/commits/main)
+---
 
 - [About this project](#about-this-project)   
 - [Features](#features)  
 - [Download](#download)
   - [Verification](#verification)
+- [Badge for project reference](#badge-for-project-reference)
 - [Screenshots](#screenshots)
 - [Contribute](#contribute)
 - [Used Icons](#used-icons)
@@ -41,7 +44,7 @@ Signature extraction inspired by [MuntashirAkon/AppManager](https://github.com/M
 
 **F-Droid link coming soon**
 
-[<img height="80" src="https://raw.githubusercontent.com/gotify/android/master/download-badge.png"/>](https://github.com/cyb3rko/quicktrust/releases/latest)
+[<img height="80" src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"/>](https://github.com/cyb3rko/quicktrust/releases/latest)
 
 ### Verification
 
