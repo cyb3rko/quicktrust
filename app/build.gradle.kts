@@ -14,8 +14,8 @@ android {
         applicationId = "de.cyb3rko.quicktrust"
         minSdk = 23
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.0.1"
         resourceConfigurations.add("en")
         signingConfig = signingConfigs.getByName("debug")
     }
