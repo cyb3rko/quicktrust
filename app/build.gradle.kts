@@ -66,10 +66,15 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
 }
 
+// Automatic pipeline build
+// build with '-Psign assembleRelease'
+// output at 'app/build/outputs/apk/release/app-release.apk'
+// build with '-Psign bundleRelease'
+// output at 'app/build/outputs/bundle/release/app-release.aab'
 if (project.hasProperty("sign")) {
     android {
         signingConfigs {
-            getByName("release") {
+            create("release") {
                 storeFile = file(System.getenv("KEYSTORE_FILE"))
                 storePassword = System.getenv("KEYSTORE_PASSWD")
                 keyAlias = System.getenv("KEYSTORE_KEY_ALIAS")
@@ -81,10 +86,13 @@ if (project.hasProperty("sign")) {
         android.signingConfigs.getByName("release")
 }
 
+// Manual Google Play Store build
+// build with '-Pgplay_upload bundleRelease'
+// output at 'app/build/outputs/bundle/release/app-release.aab'
 if (project.hasProperty("gplay_upload")) {
     android {
         signingConfigs {
-            getByName("upload") {
+            create("upload") {
                 val properties = Properties()
                 properties.load(project.rootProject.file("local.properties").inputStream())
                 storeFile = file(properties.getProperty("uploadsigning.file"))
